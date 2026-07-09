@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-forest: #143e33;
+  --color-emerald: #1B5E47;
+  --color-cream: #F8F6F2;
+  --color-gold: #D4AF37;
+  --color-charcoal: #1A1A1A;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-condensed: "Bebas Neue", sans-serif;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+  --shadow-premium: 0 10px 40px -10px rgba(0,0,0,0.15);
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-[var(--shadow-glass)];
+  }
+}
+
+body {
+  @apply bg-cream text-charcoal font-sans antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
