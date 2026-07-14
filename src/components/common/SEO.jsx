@@ -5,12 +5,14 @@ export default function SEO({
   description = "Explore thoughtfully planned domestic and international tour packages, customized holidays, family vacations, honeymoon packages and premium travel experiences with Tourswale.", 
   canonical = "", 
   keywords = "tour packages, holiday packages, travel agency in India, domestic tour packages, international tour packages",
-  ogImage = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop"
+  ogImage = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop",
+  schema,
+  robots = "index, follow"
 }) {
   const siteUrl = "https://tourswale.com"; // Placeholder production domain
-  const currentUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
+  const currentUrl = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : siteUrl;
 
-  const schemaData = {
+  const defaultSchema = {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     "name": "Tourswale",
@@ -20,11 +22,14 @@ export default function SEO({
     "image": ogImage
   };
 
+  const finalSchema = schema || defaultSchema;
+
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="robots" content={robots} />
       
       {/* Canonical Link */}
       <link rel="canonical" href={currentUrl} />
@@ -45,7 +50,7 @@ export default function SEO({
 
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(schemaData)}
+        {JSON.stringify(finalSchema)}
       </script>
     </Helmet>
   );

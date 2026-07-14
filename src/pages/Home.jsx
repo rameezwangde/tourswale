@@ -16,6 +16,7 @@ import HomeFAQ from '../components/home/HomeFAQ';
 import NewsletterSection from '../components/home/NewsletterSection';
 import FinalCTA from '../components/home/FinalCTA';
 import { homeFaqs } from '../data/homeData';
+import { siteConfig } from '../config/siteConfig';
 
 export default function Home() {
   const schemaData = [
@@ -26,14 +27,14 @@ export default function Home() {
       "image": "https://tourswale.com/logo.png",
       "@id": "https://tourswale.com",
       "url": "https://tourswale.com",
-      "telephone": "+911234567890",
-      "address": {
+      "telephone": siteConfig.contactPhone || "",
+      "address": siteConfig.officeAddress ? {
         "@type": "PostalAddress",
-        "streetAddress": "Sample Address",
-        "addressLocality": "Mumbai",
-        "postalCode": "400001",
-        "addressCountry": "IN"
-      },
+        "streetAddress": siteConfig.officeAddress.street || "",
+        "addressLocality": siteConfig.officeAddress.city || "",
+        "postalCode": siteConfig.officeAddress.pinCode || "",
+        "addressCountry": siteConfig.officeAddress.country || ""
+      } : undefined,
       "description": "Explore domestic and international holiday packages, customized tours, honeymoon trips, family vacations and premium travel experiences with Tourswale."
     },
     {
