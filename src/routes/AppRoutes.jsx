@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home';
+import Tours from '../pages/Tours';
+import TourDetail from '../pages/TourDetail';
 import NotFound from '../pages/NotFound';
 import PlaceholderPage from '../pages/PlaceholderPage';
 
@@ -12,22 +14,8 @@ export default function AppRoutes() {
         <Route index element={<Home />} />
 
         {/* Tours Routes */}
-        <Route path="tours" element={
-          <PlaceholderPage 
-            title="Tour Packages" 
-            description="Explore our curated collection of domestic and international tour packages."
-            seoTitle="Tour Packages | Tourswale"
-            seoDescription="Discover our wide range of premium tour packages."
-          />
-        } />
-        <Route path="tours/:slug" element={
-          <PlaceholderPage 
-            title="Tour Details" 
-            description="Detailed itinerary and booking information for this tour."
-            seoTitle="Tour Details | Tourswale"
-            seoDescription="View the full itinerary and details of this tour package."
-          />
-        } />
+        <Route path="tours" element={<Tours />} />
+        <Route path="tours/:slug" element={<TourDetail />} />
 
         {/* Destinations Routes */}
         <Route path="destinations" element={
