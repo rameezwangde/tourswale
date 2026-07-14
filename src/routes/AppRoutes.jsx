@@ -3,6 +3,8 @@ import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home';
 import Tours from '../pages/Tours';
 import TourDetail from '../pages/TourDetail';
+import HolidayTypes from '../pages/HolidayTypes';
+import HolidayTypeDetail from '../pages/HolidayTypeDetail';
 import NotFound from '../pages/NotFound';
 import PlaceholderPage from '../pages/PlaceholderPage';
 
@@ -36,22 +38,8 @@ export default function AppRoutes() {
         } />
 
         {/* Holiday Types Routes */}
-        <Route path="holiday-types" element={
-          <PlaceholderPage 
-            title="Holiday Types" 
-            description="Find the perfect style of vacation for you, from honeymoons to adventure trips."
-            seoTitle="Holiday Types | Tourswale"
-            seoDescription="Explore various holiday types and themes for your next trip."
-          />
-        } />
-        <Route path="holiday-types/:slug" element={
-          <PlaceholderPage 
-            title="Holiday Theme" 
-            description="Tours and packages tailored for this specific holiday theme."
-            seoTitle="Holiday Theme | Tourswale"
-            seoDescription="Browse our curated packages for this holiday theme."
-          />
-        } />
+        <Route path="holiday-types" element={<HolidayTypes />} />
+        <Route path="holiday-types/:slug" element={<HolidayTypeDetail />} />
 
         {/* Blog Routes */}
         <Route path="blog" element={
