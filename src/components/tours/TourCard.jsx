@@ -75,22 +75,22 @@ export default function TourCard({ tour, onEnquire }) {
         <hr className="border-gray-100 mb-6" />
         
         {/* Footer: Price & CTAs */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-auto">
-          <div className="w-full sm:w-auto text-left">
-            <p className="text-[10px] uppercase font-bold text-charcoal/50 tracking-wider">Starting from</p>
-            <p className="text-xl font-bold text-forest">{formattedPrice}</p>
+        <div className="flex flex-wrap justify-between items-center gap-y-4 gap-x-2 mt-auto pt-2">
+          <div className="text-left">
+            <p className="text-[10px] uppercase font-bold text-charcoal/50 tracking-wider mb-0.5">Starting from</p>
+            <p className="text-xl font-bold text-forest leading-none">{formattedPrice}</p>
           </div>
           
-          <div className="flex w-full sm:w-auto gap-2">
+          <div className="flex flex-wrap gap-2">
             <button 
               onClick={() => onEnquire(tour)}
-              className="flex-1 sm:flex-none border border-forest text-forest hover:bg-forest hover:text-white px-4 py-2.5 rounded-xl text-xs font-bold transition-colors text-center"
+              className="border border-forest text-forest hover:bg-forest hover:text-white px-3.5 py-2.5 rounded-xl text-xs font-bold transition-colors text-center"
             >
               Enquire
             </button>
             <Link 
               to={`/tours/${tour.slug}`}
-              className="flex-1 sm:flex-none bg-forest hover:bg-emerald text-white px-4 py-2.5 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1.5 group/btn"
+              className="bg-forest hover:bg-emerald text-white px-3.5 py-2.5 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1.5 group/btn"
             >
               Details <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" />
             </Link>
