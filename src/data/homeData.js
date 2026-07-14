@@ -4,22 +4,26 @@ export const trustHighlights = [
   {
     title: "Best Price Promise",
     description: "Enjoy thoughtfully planned holidays with transparent and competitive pricing.",
-    icon: "Shield"
+    icon: "Shield",
+    image: "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Flexible Travel Planning",
     description: "Choose travel dates, accommodation types and experiences that suit your preferences.",
-    icon: "Calendar"
+    icon: "Calendar",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Expert Travel Guidance",
     description: "Receive reliable assistance from travel specialists throughout your journey.",
-    icon: "Compass"
+    icon: "Compass",
+    image: "https://images.unsplash.com/photo-1533240332313-0cb49e471bea?q=80&w=800&auto=format&fit=crop"
   },
   {
     title: "Safe and Secure Enquiries",
     description: "Plan confidently with clear package details and secure enquiry forms.",
-    icon: "Lock"
+    icon: "Lock",
+    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
