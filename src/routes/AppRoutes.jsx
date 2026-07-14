@@ -7,6 +7,14 @@ import HolidayTypes from '../pages/HolidayTypes';
 import HolidayTypeDetail from '../pages/HolidayTypeDetail';
 import BlogListing from '../pages/BlogListing';
 import BlogDetail from '../pages/BlogDetail';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
+import FAQ from '../pages/FAQ';
+import ThankYou from '../pages/ThankYou';
+import PrivacyPolicy from '../pages/legal/PrivacyPolicy';
+import TermsAndConditions from '../pages/legal/TermsAndConditions';
+import CancellationPolicy from '../pages/legal/CancellationPolicy';
+import CookiePolicy from '../pages/legal/CookiePolicy';
 import NotFound from '../pages/NotFound';
 import PlaceholderPage from '../pages/PlaceholderPage';
 
@@ -48,32 +56,20 @@ export default function AppRoutes() {
         <Route path="blog/:slug" element={<BlogDetail />} />
 
         {/* Other Pages */}
-        <Route path="about" element={
-          <PlaceholderPage 
-            title="About Us" 
-            description="Learn more about Tourswale and our mission to create unforgettable travel experiences."
-            seoTitle="About Us | Tourswale"
-            seoDescription="Discover the story behind Tourswale, your trusted travel agency."
-          />
-        } />
-        <Route path="contact" element={
-          <PlaceholderPage 
-            title="Contact Us" 
-            description="Get in touch with our travel experts to plan your dream vacation."
-            seoTitle="Contact Us | Tourswale"
-            seoDescription="Reach out to Tourswale for bookings and inquiries."
-          />
-        } />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
         
         {/* Legal & Misc */}
-        <Route path="faq" element={<PlaceholderPage title="FAQs" description="Frequently asked questions." seoTitle="FAQs | Tourswale" seoDescription="Find answers to common travel queries." />} />
+        <Route path="faq" element={<FAQ />} />
+        <Route path="thank-you" element={<ThankYou />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="cancellation-policy" element={<CancellationPolicy />} />
+        <Route path="cookie-policy" element={<CookiePolicy />} />
+        
+        {/* Unimplemented placeholders */}
         <Route path="booking" element={<PlaceholderPage title="Booking" description="Complete your booking process." seoTitle="Booking | Tourswale" seoDescription="Book your perfect trip." />} />
         <Route path="search" element={<PlaceholderPage title="Search Results" description="Find exactly what you are looking for." seoTitle="Search | Tourswale" seoDescription="Search for tour packages." />} />
-        <Route path="thank-you" element={<PlaceholderPage title="Thank You" description="Your request has been received." seoTitle="Thank You | Tourswale" seoDescription="Thank you for choosing Tourswale." />} />
-        <Route path="privacy-policy" element={<PlaceholderPage title="Privacy Policy" description="Our privacy practices." seoTitle="Privacy Policy | Tourswale" seoDescription="Read our privacy policy." />} />
-        <Route path="terms-and-conditions" element={<PlaceholderPage title="Terms & Conditions" description="Our terms of service." seoTitle="Terms & Conditions | Tourswale" seoDescription="Read our terms and conditions." />} />
-        <Route path="cancellation-policy" element={<PlaceholderPage title="Cancellation Policy" description="Our cancellation and refund policies." seoTitle="Cancellation Policy | Tourswale" seoDescription="Read our cancellation policy." />} />
-        <Route path="cookie-policy" element={<PlaceholderPage title="Cookie Policy" description="How we use cookies." seoTitle="Cookie Policy | Tourswale" seoDescription="Read our cookie policy." />} />
         <Route path="sitemap" element={<PlaceholderPage title="Sitemap" description="Navigate through our website." seoTitle="Sitemap | Tourswale" seoDescription="Website sitemap for Tourswale." />} />
 
         {/* 404 Route */}

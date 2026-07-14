@@ -82,9 +82,12 @@ const Footer = () => {
           <p className="text-forest/50 text-sm">
             &copy; {new Date().getFullYear()} Tourswale. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex gap-4 md:gap-6 flex-wrap justify-center">
+            <Link to="/faq" className="text-forest/50 hover:text-earth text-sm transition-colors">FAQ</Link>
             <Link to="/privacy-policy" className="text-forest/50 hover:text-earth text-sm transition-colors">Privacy Policy</Link>
-            <Link to="/terms-and-conditions" className="text-forest/50 hover:text-earth text-sm transition-colors">Terms of Service</Link>
+            <Link to="/terms-and-conditions" className="text-forest/50 hover:text-earth text-sm transition-colors">Terms and Conditions</Link>
+            <Link to="/cancellation-policy" className="text-forest/50 hover:text-earth text-sm transition-colors">Cancellation Policy</Link>
+            <Link to="/cookie-policy" className="text-forest/50 hover:text-earth text-sm transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>
