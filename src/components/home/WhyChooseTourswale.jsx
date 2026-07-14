@@ -31,7 +31,7 @@ export default function WhyChooseTourswale() {
               description="Tourswale creates memorable travel experiences through thoughtfully planned itineraries, trusted travel partners, comfortable stays and personalized support. From your first enquiry to your return home, our team helps make every stage of your journey smoother and more enjoyable."
             />
             <div className="mt-10">
-              <PrimaryButton to="/about" className="bg-white text-forest hover:bg-cream hover:text-forest">
+              <PrimaryButton to="/about" light={true}>
                 Learn More About Tourswale
               </PrimaryButton>
             </div>

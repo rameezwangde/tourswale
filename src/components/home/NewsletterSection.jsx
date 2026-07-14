@@ -53,7 +53,7 @@ export default function NewsletterSection() {
                       if (status === 'error') setStatus('idle');
                     }}
                     placeholder="Enter your email address" 
-                    className="w-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-white/50 px-6 py-4 rounded-xl focus:outline-none focus:border-gold transition-colors text-sm"
+                    className="w-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-white/50 pl-6 pr-44 py-4 rounded-xl focus:outline-none focus:border-gold transition-colors text-sm"
                     disabled={status === 'loading' || status === 'success'}
                     aria-label="Email address"
                   />

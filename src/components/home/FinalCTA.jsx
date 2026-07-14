@@ -16,7 +16,7 @@ export default function FinalCTA() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4">
-          <PrimaryButton to="/contact" className="bg-white text-forest hover:bg-cream hover:text-forest">
+          <PrimaryButton to="/contact" light={true}>
             Plan My Holiday
           </PrimaryButton>
           <SecondaryButton to="/tours" light={true}>

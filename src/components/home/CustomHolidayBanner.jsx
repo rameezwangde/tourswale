@@ -26,7 +26,7 @@ export default function CustomHolidayBanner() {
         />
         
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <PrimaryButton to="/contact?type=custom-holiday" className="bg-white text-forest hover:bg-cream hover:text-forest">
+          <PrimaryButton to="/contact?type=custom-holiday" light={true}>
             Create My Custom Tour
           </PrimaryButton>
           <SecondaryButton to="/contact" light={true}>
