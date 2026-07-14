@@ -7,7 +7,7 @@ import Loader from '../components/common/Loader';
 const Home = lazy(() => import('../pages/Home'));
 const Tours = lazy(() => import('../pages/Tours'));
 const TourDetail = lazy(() => import('../pages/TourDetail'));
-const Destinations = lazy(() => import('../pages/Destinations'));
+const Destinations = lazy(() => import('../pages/Destinations')); // HMR trigger
 const DestinationDetail = lazy(() => import('../pages/DestinationDetail'));
 const HolidayTypes = lazy(() => import('../pages/HolidayTypes'));
 const HolidayTypeDetail = lazy(() => import('../pages/HolidayTypeDetail'));

@@ -47,7 +47,7 @@ const ToursMegaMenu = () => (
           <ul className="space-y-3">
             {domesticTours.map(item => (
               <li key={item}>
-                <Link to={`/tours/${item.toLowerCase().replace(/ /g, '-')}`} className="text-charcoal/70 hover:text-gold text-[13px] font-medium transition-colors block">
+                <Link to={`/destinations/${item.toLowerCase().replace(/ /g, '-')}`} className="text-charcoal/70 hover:text-gold text-[13px] font-medium transition-colors block">
                   {item}
                 </Link>
               </li>
@@ -59,7 +59,7 @@ const ToursMegaMenu = () => (
           <ul className="space-y-3">
             {internationalTours.map(item => (
               <li key={item}>
-                <Link to={`/tours/${item.toLowerCase().replace(/ /g, '-')}`} className="text-charcoal/70 hover:text-gold text-[13px] font-medium transition-colors block">
+                <Link to={`/destinations/${item.toLowerCase().replace(/ /g, '-')}`} className="text-charcoal/70 hover:text-gold text-[13px] font-medium transition-colors block">
                   {item}
                 </Link>
               </li>
@@ -461,7 +461,7 @@ export default function Navbar() {
                         <div className="pb-4 pl-4 space-y-3">
                           <Link to="/tours" className="block text-sm font-semibold text-forest">All Tours &rarr;</Link>
                           {domesticTours.slice(0,4).map(item => (
-                            <Link key={item} to={`/tours/${item.toLowerCase()}`} className="block text-sm text-charcoal/70 hover:text-gold">{item}</Link>
+                            <Link key={item} to={`/destinations/${item.toLowerCase()}`} className="block text-sm text-charcoal/70 hover:text-gold">{item}</Link>
                           ))}
                         </div>
                       </motion.div>

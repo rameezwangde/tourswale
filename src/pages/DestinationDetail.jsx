@@ -19,8 +19,8 @@ export default function DestinationDetail() {
   // Find related tours (assuming tours have a location or destination property. 
   // Let's filter by checking if tour title or location includes the destination name)
   const relatedTours = tours.filter(tour => 
-    tour.location.toLowerCase().includes(destination.name.toLowerCase()) ||
-    tour.title.toLowerCase().includes(destination.name.toLowerCase())
+    (tour.destination && tour.destination.toLowerCase().includes(destination.name.toLowerCase())) ||
+    (tour.title && tour.title.toLowerCase().includes(destination.name.toLowerCase()))
   );
 
   return (
