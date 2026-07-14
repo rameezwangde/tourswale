@@ -5,6 +5,8 @@ import Tours from '../pages/Tours';
 import TourDetail from '../pages/TourDetail';
 import HolidayTypes from '../pages/HolidayTypes';
 import HolidayTypeDetail from '../pages/HolidayTypeDetail';
+import BlogListing from '../pages/BlogListing';
+import BlogDetail from '../pages/BlogDetail';
 import NotFound from '../pages/NotFound';
 import PlaceholderPage from '../pages/PlaceholderPage';
 
@@ -42,22 +44,8 @@ export default function AppRoutes() {
         <Route path="holiday-types/:slug" element={<HolidayTypeDetail />} />
 
         {/* Blog Routes */}
-        <Route path="blog" element={
-          <PlaceholderPage 
-            title="Travel Blog" 
-            description="Read the latest travel tips, guides, and inspiration from our experts."
-            seoTitle="Travel Blog & Tips | Tourswale"
-            seoDescription="Stay updated with our latest travel blogs, tips, and destination guides."
-          />
-        } />
-        <Route path="blog/:slug" element={
-          <PlaceholderPage 
-            title="Blog Article" 
-            description="In-depth travel article and insights."
-            seoTitle="Blog Article | Tourswale"
-            seoDescription="Read our latest insights and tips."
-          />
-        } />
+        <Route path="blog" element={<BlogListing />} />
+        <Route path="blog/:slug" element={<BlogDetail />} />
 
         {/* Other Pages */}
         <Route path="about" element={
