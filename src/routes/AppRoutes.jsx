@@ -7,6 +7,8 @@ import Loader from '../components/common/Loader';
 const Home = lazy(() => import('../pages/Home'));
 const Tours = lazy(() => import('../pages/Tours'));
 const TourDetail = lazy(() => import('../pages/TourDetail'));
+const Destinations = lazy(() => import('../pages/Destinations'));
+const DestinationDetail = lazy(() => import('../pages/DestinationDetail'));
 const HolidayTypes = lazy(() => import('../pages/HolidayTypes'));
 const HolidayTypeDetail = lazy(() => import('../pages/HolidayTypeDetail'));
 const BlogListing = lazy(() => import('../pages/BlogListing'));
@@ -35,22 +37,8 @@ export default function AppRoutes() {
           <Route path="tours/:slug" element={<TourDetail />} />
 
           {/* Destinations Routes */}
-          <Route path="destinations" element={
-            <PlaceholderPage 
-              title="Destinations" 
-              description="Browse beautiful destinations around the world."
-              seoTitle="Destinations | Tourswale"
-              seoDescription="Explore stunning domestic and international destinations with Tourswale."
-            />
-          } />
-          <Route path="destinations/:slug" element={
-            <PlaceholderPage 
-              title="Destination Details" 
-              description="Learn more about this breathtaking destination."
-              seoTitle="Destination Guide | Tourswale"
-              seoDescription="Discover top attractions and tours in this beautiful destination."
-            />
-          } />
+          <Route path="destinations" element={<Destinations />} />
+          <Route path="destinations/:slug" element={<DestinationDetail />} />
 
           {/* Holiday Types Routes */}
           <Route path="holiday-types" element={<HolidayTypes />} />
