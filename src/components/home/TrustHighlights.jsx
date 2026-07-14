@@ -56,15 +56,15 @@ export default function TrustHighlights() {
 
               {/* Content */}
               <div className="absolute inset-0 p-8 flex flex-col justify-end z-10">
-                <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-6 group-hover:bg-gold group-hover:border-gold transition-colors duration-500">
-                  {getIcon(item.icon, "w-7 h-7 text-white transition-colors duration-500")}
+                <div className="w-14 h-14 rounded-2xl bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-500 transform group-hover:-translate-y-1">
+                  {getIcon(item.icon, "w-7 h-7 text-forest group-hover:text-white transition-colors duration-500")}
                 </div>
                 
                 <h4 className="text-white font-serif font-semibold text-xl mb-3 transform translate-y-0 group-hover:-translate-y-1 transition-transform duration-500">
                   {item.title}
                 </h4>
                 
-                <p className="text-white/70 text-sm leading-relaxed transform translate-y-0 group-hover:-translate-y-1 transition-transform duration-500">
+                <p className="text-white/80 text-sm leading-relaxed transform translate-y-0 group-hover:-translate-y-1 transition-transform duration-500">
                   {item.description}
                 </p>
               </div>
