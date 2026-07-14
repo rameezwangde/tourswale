@@ -1,41 +1,10 @@
 import { motion } from 'framer-motion';
 import { MapPin, Star, Plane, ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { destinations } from '../../data/destinations';
 
 export default function Destinations() {
-  const destinations = [
-    {
-      region: 'EUROPE',
-      name: 'Switzerland',
-      desc: 'Experience the Swiss Alps, scenic trains, lakes & charming villages.',
-      tours: '12 TOURS',
-      rating: '4.9',
-      image: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=400&auto=format&fit=crop'
-    },
-    {
-      region: 'INDIAN OCEAN',
-      name: 'Maldives',
-      desc: 'Turquoise waters, overwater villas and unmatched serenity.',
-      tours: '8 TOURS',
-      rating: '5.0',
-      image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=400&auto=format&fit=crop'
-    },
-    {
-      region: 'MIDDLE EAST',
-      name: 'Dubai',
-      desc: 'Luxury experiences, iconic landmarks & vibrant city life.',
-      tours: '15 TOURS',
-      rating: '4.8',
-      image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=400&auto=format&fit=crop'
-    },
-    {
-      region: 'INDONESIA',
-      name: 'Bali',
-      desc: 'Tropical beaches, cultural heritage and spiritual escapes.',
-      tours: '20 TOURS',
-      rating: '4.7',
-      image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=400&auto=format&fit=crop'
-    }
-  ];
+  // We only show the first 4 in the featured section
+  const featuredDestinations = destinations.slice(0, 4);
 
   return (
     <section className="bg-[#FAF9F6] pt-28 pb-20 relative overflow-hidden z-10">
@@ -98,7 +67,7 @@ export default function Destinations() {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {destinations.map((dest, idx) => (
+          {featuredDestinations.map((dest, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
@@ -113,7 +82,7 @@ export default function Destinations() {
               {/* Image filling top half and fading into bottom green block */}
               <div className="absolute top-0 left-0 right-0 h-[60%] z-0">
                 <img 
-                  src={dest.image} 
+                  src={dest.cardImage} 
                   alt={dest.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -127,7 +96,7 @@ export default function Destinations() {
                   <span className="text-[10px] font-bold mt-[1px]">{dest.rating}</span>
                 </div>
                 <div className="bg-black/40 backdrop-blur-md px-3 py-[4px] rounded-full text-white">
-                  <span className="text-[9px] font-bold tracking-widest uppercase mt-[1px] block">{dest.tours}</span>
+                  <span className="text-[9px] font-bold tracking-widest uppercase mt-[1px] block">{dest.numberOfTours} TOURS</span>
                 </div>
               </div>
 
@@ -140,8 +109,8 @@ export default function Destinations() {
                 
                 <h3 className="text-white text-[28px] font-serif font-semibold mb-3 tracking-tight">{dest.name}</h3>
                 
-                <p className="text-[#c1d1c8] text-[11px] leading-[1.7] font-medium tracking-wide mb-6 min-h-[38px] pr-2">
-                  {dest.desc}
+                <p className="text-[#c1d1c8] text-[11px] leading-[1.7] font-medium tracking-wide mb-6 min-h-[38px] pr-2 line-clamp-2">
+                  {dest.shortDescription}
                 </p>
 
                 <div className="flex items-center gap-3 cursor-pointer group/btn w-max">

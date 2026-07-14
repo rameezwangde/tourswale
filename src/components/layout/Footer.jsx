@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -33,9 +34,9 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               {['Bali, Indonesia', 'Swiss Alps', 'Santorini, Greece', 'Kyoto, Japan', 'Amalfi Coast'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-forest/70 hover:text-earth transition-colors duration-200 text-sm">
+                  <Link to={`/destinations/${link.split(',')[0].toLowerCase().replace(/ /g, '-')}`} className="text-forest/70 hover:text-earth transition-colors duration-200 text-sm">
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -46,9 +47,9 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               {['About Us', 'Travel Guides', 'Partner Network', 'Careers', 'Contact'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-forest/70 hover:text-earth transition-colors duration-200 text-sm">
+                  <Link to={`/${link.toLowerCase().replace(/ /g, '-')}`} className="text-forest/70 hover:text-earth transition-colors duration-200 text-sm">
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -82,8 +83,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Tourswale. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-forest/50 hover:text-earth text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-forest/50 hover:text-earth text-sm transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="text-forest/50 hover:text-earth text-sm transition-colors">Privacy Policy</Link>
+            <Link to="/terms-and-conditions" className="text-forest/50 hover:text-earth text-sm transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

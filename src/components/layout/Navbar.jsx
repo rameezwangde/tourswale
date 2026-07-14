@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, Phone, Plane, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,21 +20,21 @@ export default function Navbar() {
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-1 cursor-pointer">
-          <span className="text-[26px] font-bold text-charcoal tracking-tight flex items-center relative">
+          <Link to="/" className="text-[26px] font-bold text-charcoal tracking-tight flex items-center relative">
             tourswale
             <Plane className="w-4 h-4 text-gold absolute -top-1 -right-3 rotate-45" fill="currentColor" strokeWidth={0} />
-          </span>
+          </Link>
         </div>
 
         {/* Links */}
         <div className="hidden lg:flex items-center gap-8 text-[11px] font-bold text-charcoal uppercase tracking-wider">
-          <a href="#" className="hover:text-forest transition-colors">Home</a>
-          <a href="#" className="hover:text-forest transition-colors flex items-center gap-1">Tours <ChevronDown className="w-3 h-3"/></a>
-          <a href="#" className="hover:text-forest transition-colors">Destinations</a>
-          <a href="#" className="hover:text-forest transition-colors">Holiday Types</a>
-          <a href="#" className="hover:text-forest transition-colors">Blog</a>
-          <a href="#" className="hover:text-forest transition-colors">About Us</a>
-          <a href="#" className="hover:text-forest transition-colors">Contact Us</a>
+          <Link to="/" className="hover:text-forest transition-colors">Home</Link>
+          <Link to="/tours" className="hover:text-forest transition-colors flex items-center gap-1">Tours <ChevronDown className="w-3 h-3"/></Link>
+          <Link to="/destinations" className="hover:text-forest transition-colors">Destinations</Link>
+          <Link to="/holiday-types" className="hover:text-forest transition-colors">Holiday Types</Link>
+          <Link to="/blog" className="hover:text-forest transition-colors">Blog</Link>
+          <Link to="/about" className="hover:text-forest transition-colors">About Us</Link>
+          <Link to="/contact" className="hover:text-forest transition-colors">Contact Us</Link>
         </div>
 
         {/* Right Actions */}
