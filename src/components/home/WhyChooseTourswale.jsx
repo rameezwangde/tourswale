@@ -5,13 +5,13 @@ import PrimaryButton from '../common/PrimaryButton';
 import { whyChooseFeatures } from '../../data/homeData';
 
 export default function WhyChooseTourswale() {
-  const getIcon = (name) => {
+  const getIcon = (name, className) => {
     switch (name) {
-      case 'Settings': return <Settings className="w-6 h-6 text-gold" />;
-      case 'Home': return <Home className="w-6 h-6 text-gold" />;
-      case 'MapPin': return <MapPin className="w-6 h-6 text-gold" />;
-      case 'Briefcase': return <Briefcase className="w-6 h-6 text-gold" />;
-      default: return <Settings className="w-6 h-6 text-gold" />;
+      case 'Settings': return <Settings className={className} />;
+      case 'Home': return <Home className={className} />;
+      case 'MapPin': return <MapPin className={className} />;
+      case 'Briefcase': return <Briefcase className={className} />;
+      default: return <Settings className={className} />;
     }
   };
 
@@ -44,8 +44,8 @@ export default function WhyChooseTourswale() {
                   key={index} 
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:-translate-y-1 transition-all duration-300 hover:bg-white/10 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-white/20 transition-colors">
-                    {getIcon(feature.icon)}
+                  <div className="w-14 h-14 rounded-2xl bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] flex items-center justify-center mb-6 group-hover:bg-gold transition-colors duration-500 transform group-hover:-translate-y-1">
+                    {getIcon(feature.icon, "w-6 h-6 text-forest group-hover:text-white transition-colors duration-500")}
                   </div>
                   <h4 className="text-white font-serif font-semibold text-xl mb-3">{feature.title}</h4>
                   <p className="text-white/70 text-sm leading-relaxed">{feature.description}</p>
