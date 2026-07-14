@@ -11,21 +11,25 @@ export default function FeaturedDestinations() {
   if (featuredList.length < 4) return null;
 
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden bg-[#Fdfbf7]">
-      {/* Subtle background element */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold to-transparent pointer-events-none"></div>
+    <section className="py-20 lg:py-28 relative overflow-hidden bg-forest text-white">
+      {/* Premium Background Decor */}
+      <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none"></div>
+      <svg className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-[0.1] text-gold" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-100 600 C 300 800, 800 400, 1500 700" stroke="currentColor" strokeWidth="1" />
+        <path d="M-100 620 C 300 820, 800 420, 1500 720" stroke="currentColor" strokeWidth="1" />
+      </svg>
 
       <Container className="relative z-10">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-end mb-12 gap-8">
           <div className="max-w-2xl">
-            <span className="text-forest font-bold uppercase tracking-[0.15em] text-[11px] mb-4 block">
+            <span className="text-gold font-bold uppercase tracking-[0.15em] text-[11px] mb-4 block">
               FEATURED DESTINATIONS
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-charcoal mb-5 leading-[1.15]">
+            <h2 className="text-4xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-white mb-5 leading-[1.15]">
               Handpicked Places,<br/>Unforgettable Journeys
             </h2>
-            <p className="text-charcoal/70 text-[15px] leading-relaxed max-w-xl">
+            <p className="text-white/80 text-[15px] leading-relaxed max-w-xl">
               Explore some of the world's most loved destinations, selected for their natural beauty, culture, experiences and unforgettable travel opportunities.
             </p>
           </div>
@@ -33,12 +37,12 @@ export default function FeaturedDestinations() {
           <div className="flex flex-col items-end gap-3">
             <Link 
               to="/destinations"
-              className="inline-flex items-center gap-2 border border-forest hover:bg-forest text-forest hover:text-white px-7 py-3 rounded-full text-sm font-semibold transition-all duration-300"
+              className="inline-flex items-center gap-2 border border-gold hover:bg-gold text-gold hover:text-forest px-7 py-3 rounded-full text-sm font-semibold transition-all duration-300"
             >
               View All Destinations
               <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
-            <span className="text-[11px] text-charcoal/60 mr-2">Explore the world with Tourswale</span>
+            <span className="text-[11px] text-white/60 mr-2">Explore the world with Tourswale</span>
           </div>
         </div>
 
@@ -109,7 +113,7 @@ export default function FeaturedDestinations() {
         </div>
 
         {/* Bottom Features */}
-        <div className="mt-12 flex items-center justify-center gap-4 text-charcoal/60 text-[13px] font-medium">
+        <div className="mt-12 flex items-center justify-center gap-4 text-white/70 text-[13px] font-medium">
           <span className="text-gold/80 hidden sm:block">🌿</span>
           <span className="flex items-center gap-3">
             <span>Curated journeys</span>

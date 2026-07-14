@@ -5,8 +5,11 @@ import { experienceThemes } from '../../data/homeData';
 
 export default function ExperienceShowcase() {
   return (
-    <section className="py-20 lg:py-28 bg-charcoal text-white overflow-hidden">
-      <Container>
+    <section className="py-20 lg:py-28 bg-forest text-white overflow-hidden relative">
+      {/* Background Decor */}
+      <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white to-transparent pointer-events-none"></div>
+      
+      <Container className="relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16">
           <div className="lg:w-1/2">
             <SectionHeading 

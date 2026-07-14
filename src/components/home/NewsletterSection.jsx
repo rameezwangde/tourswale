@@ -29,17 +29,21 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-white border-t border-gray-100">
-      <Container>
-        <div className="bg-forest rounded-[32px] overflow-hidden relative shadow-[0_20px_40px_-15px_rgba(20,62,51,0.5)]">
+    <section className="py-20 lg:py-28 relative overflow-hidden bg-forest text-white">
+      {/* Background Decor */}
+      <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold to-transparent pointer-events-none"></div>
+
+      <Container className="relative z-10">
+        <div className="bg-white/5 border border-gold/20 rounded-[32px] overflow-hidden relative shadow-2xl backdrop-blur-sm">
           {/* Decorative Elements */}
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-emerald/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gold/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-emerald/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
           
           <div className="relative z-10 px-6 py-16 md:py-20 lg:px-24 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="text-center lg:text-left max-w-xl">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4 leading-tight">Travel Inspiration, Delivered to Your Inbox</h2>
-              <p className="text-white/80 text-sm md:text-base leading-relaxed">Receive destination ideas, seasonal travel guides and selected holiday offers from Tourswale.</p>
+              <span className="text-gold font-bold uppercase tracking-[0.15em] text-[11px] mb-4 block">STAY CONNECTED</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-5 leading-[1.15]">Travel Inspiration,<br/>Delivered to Your Inbox</h2>
+              <p className="text-white/80 text-[15px] leading-relaxed">Receive destination ideas, seasonal travel guides and selected holiday offers directly from our travel experts.</p>
             </div>
             
             <div className="w-full lg:w-auto min-w-[320px] max-w-md">
@@ -53,13 +57,13 @@ export default function NewsletterSection() {
                       if (status === 'error') setStatus('idle');
                     }}
                     placeholder="Enter your email address" 
-                    className="w-full bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-white/50 pl-6 pr-44 py-4 rounded-xl focus:outline-none focus:border-gold transition-colors text-sm"
+                    className="w-full bg-forest/80 backdrop-blur-sm border border-gold/30 text-white placeholder:text-white/50 pl-6 pr-44 py-4 rounded-xl focus:outline-none focus:border-gold transition-colors text-sm shadow-inner"
                     disabled={status === 'loading' || status === 'success'}
                     aria-label="Email address"
                   />
                   <button 
                     type="submit" 
-                    className={`absolute right-2 px-6 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center ${status === 'success' ? 'bg-emerald text-white' : 'bg-gold hover:bg-white text-forest'}`}
+                    className={`absolute right-2 px-6 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center ${status === 'success' ? 'bg-emerald text-white' : 'bg-gold hover:bg-white text-forest shadow-md'}`}
                     disabled={status === 'loading' || status === 'success'}
                   >
                     {status === 'loading' ? (
@@ -82,8 +86,8 @@ export default function NewsletterSection() {
                     {message}
                   </p>
                 )}
-                <p className="text-white/40 text-[10px] text-center lg:text-left mt-2">
-                  * Note: Integration with newsletter backend can be connected later.
+                <p className="text-white/40 text-[10px] text-center lg:text-left mt-2 px-2">
+                  We respect your privacy. Unsubscribe at any time.
                 </p>
               </form>
             </div>
